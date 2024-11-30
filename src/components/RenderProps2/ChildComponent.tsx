@@ -1,3 +1,8 @@
+
+type ChildComponentProps = {
+  
+}
+
 const ChildComponent = () => {
   return (
     <>
