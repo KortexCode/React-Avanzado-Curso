@@ -6,7 +6,7 @@ interface ParentComponentProps {
 
 
 const ParentComponent: React.FC<ParentComponentProps> = ({render}) => {
-    const [data] = useState<string[]>(["Elf🧝‍♂️", "Un-Death💀","Nocturne🧛‍♂️", "Human Mage🧙‍♂️", "Human Assasing🥷","Human Warrior🤴"])
+    const [data] = useState<string[]>(["Elf🧝‍♂️", "Un-Dead💀","Nocturne🧛‍♂️", "Human Mage🧙‍♂️", "Human Assasing🥷","Human Warrior🤴"])
 
     return (
     <>
