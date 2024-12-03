@@ -20,8 +20,8 @@ const ComponentWithLoading = withLoading(ComponentWithoudLoading)
 export const ParentComponent = () => {
   return (
     <div>
-      <ComponentWithLoading message="Hello chikorita" isLoading={false}/>
-      <ComponentWithLoading message="Hello chikorita" isLoading={true}/>
+      <ComponentWithLoading message="Hello Chikorita" isLoading={false}/>
+      <ComponentWithLoading message="Hello Chikorita" isLoading={true}/>
     </div>
   );
 };
