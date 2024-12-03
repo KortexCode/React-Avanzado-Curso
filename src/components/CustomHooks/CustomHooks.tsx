@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLoading } from "./useLoading";
 
 const UserComponent = () => {
 
-  const {isLoading, setIsLoading} = useLoading(false);
-  const [activeBtn, setActiveBtn] = useState(false);
+  //Se solicita el hook creado
+  const {isLoading} = useLoading(false);
 
   let message: React.ReactNode;
-  //Función del botón para mostrar mensaje
-  const handleClickMessage: React.MouseEventHandler = () => {
-    if(!isLoading) {
-      setIsLoading(!isLoading);
-    }
-  }
-  //lógica para mostrar mensaje
+  
+  //lógica para mostrar mensaje dependiendo del isLoading estado
   if(isLoading) {
     message = 
       (
@@ -22,18 +17,11 @@ const UserComponent = () => {
   }else {
     message = (<p>Loading...🧌</p>);
   }
-  //Simulando asincronismo , respuesta a carga del mensaje
- useEffect(()=> {
-  setTimeout(()=> {
-      setActiveBtn(!activeBtn)
-  }, 3000)
- }, []);
-  
+ 
   return (
     <div>
         <h2>For the Horde!!</h2>
         {message}
-        {activeBtn && <button  onClick={handleClickMessage}>Show Message</button>}
     </div>
   )
 
