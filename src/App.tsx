@@ -89,7 +89,6 @@ function App() {
     <>
       <header>
         <h1>🌱 Patrones de renderizado y composición en React 🌿</h1>
-        <button onClick={activateNextSection}>Activar ejemplo del siguiente patrón</button>
       </header>
       <section className="Patterns">
         {sections.length === 0 ? (
@@ -106,6 +105,9 @@ function App() {
           )
         )}
       </section>
+      <div className="btn-container">
+        <button className="btn-next-example" onClick={activateNextSection}>Activar ejemplo del siguiente patrón</button>
+      </div>
       <footer>
         <p>
           <span>Made with 💚 and 👩🏻‍💻</span>
