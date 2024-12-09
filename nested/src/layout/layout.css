@@ -1,0 +1,8 @@
+.layout_nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout_nav li {
+    margin-top: 8px;
+}
