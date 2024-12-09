@@ -6,7 +6,7 @@ export const UncontrolledInput = () => {
   const input2Ref = useRef<HTMLInputElement>(null);
 
   const handleClickBtnSubmit: React.MouseEventHandler<HTMLButtonElement> = () => {
-    console.log(inputRef.current)
+    
     const inputValue = inputRef.current?.value;
     const inputValue2 = input2Ref.current?.value;
     
