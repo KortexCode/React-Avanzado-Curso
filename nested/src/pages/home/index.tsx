@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 function Home() {
     const navigate = useNavigate();
-
+   
     const handleNavigate: React.MouseEventHandler = () => {
         navigate("about", {state: {message: "It comes from Home"}});
     }

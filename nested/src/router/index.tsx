@@ -1,15 +1,17 @@
 import React, { lazy, Suspense } from "react";
 import { createHashRouter } from "react-router-dom";
 import { Layout } from "../layout";
-import { Home } from "../routes/home";
-import { About } from "../routes/about/about";
-import { Product } from "../routes/products";
+import { Home } from "../pages/home";
+import { About } from "../pages/about/about";
+import { Product } from "../pages/products";
 import { Setting } from "../routes/setting";
 /* import { OverView } from "../routes/overView"; */
-const OverView = lazy(()=> import("../routes/overView/index"));
-import { DashBoard } from "../routes/dashboard";
+const OverView = lazy(()=> import("../routes/overView/index.tsx"));
+import { DashBoard } from "../pages/dashboard";
 import { RouteTest } from "../routes/routeTest";
 import { RouteTest1 } from "../routes/routeTest1";
+import { Profile } from "../components/profile";
+import { UserProfile } from "../pages/userProfile";
 
 const router = createHashRouter([
     {
@@ -59,9 +61,17 @@ const router = createHashRouter([
                     },
                 ]
             },
+            {
+                path: "profile",
+                element:(
+                <UserProfile isAuthenticated={false}>
+                    <Profile/>
+                </UserProfile>
+                )
+            }
             
         ],
-        errorElement: <h2> Error no se enceuntra</h2>
+        errorElement: <h2> Error not found 404</h2>
     }
 ]);
 

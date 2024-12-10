@@ -1,7 +1,7 @@
 import React from "react"
 
 
-function OverView () {
+ const OverView = function() {
 
     return(
         <section>
