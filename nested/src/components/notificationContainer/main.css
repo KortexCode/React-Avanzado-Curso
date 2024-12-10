@@ -1,0 +1,40 @@
+aside {
+    background-color: var(--light-green);
+    border-radius: 8px;
+    display: flex;
+    padding: 24px;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    padding: 24px;
+
+    & h1 {
+            text-align: center;
+            margin: 0;
+        }
+    
+    & p {
+            text-align: center;
+        }
+    
+    & button {
+        background-color: var(--yellow);
+        color: var(--green);
+        cursor: pointer;
+        border: 1px solid var(--green);
+        border-radius: 8px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 8px 16px;
+        margin-top: 8px;
+        transition: border 0.1s ease;
+    
+        &:hover {
+            border-left: 2px solid var(--green);
+            border-bottom: 2px solid var(--green);
+        }
+    }
+}
+
+ 
