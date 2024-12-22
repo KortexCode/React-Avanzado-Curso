@@ -12,6 +12,7 @@ import { RouteTest } from "../routes/routeTest";
 import { RouteTest1 } from "../routes/routeTest1";
 import { Profile } from "../components/profile";
 import { UserProfile } from "../pages/userProfile";
+import { TodoList } from "../pages/todoList/index.jsx";
 
 const router = createHashRouter([
     {
@@ -68,6 +69,11 @@ const router = createHashRouter([
                     <Profile/>
                 </UserProfile>
                 )
+            },
+            {
+                path: "todo-list",
+                element:<TodoList/>
+                
             }
             
         ],

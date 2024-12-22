@@ -16,6 +16,9 @@ export function Layout() {
                <li>
                    <Link to={"dashboard"}>Dashboard</Link>
                </li>
+               <li>
+                   <Link to={"todo-list"}>TodoList</Link>
+               </li>
            </ul>
         </nav>
            <Outlet/>
