@@ -17,6 +17,7 @@ export default defineConfig(({ command, mode }) => {
           input: {
             main: resolve(__dirname, "index.html"),
             nested: resolve(__dirname, "nested/index.html"),
+            nestedRedux: resolve(__dirname, "nestedRedux/index.html"),
           },
         },
       },
