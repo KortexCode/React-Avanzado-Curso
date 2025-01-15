@@ -30,7 +30,7 @@ function TodoList() {
 
   return (
     <div className="todoList">
-      <em>Made with useReducer</em>
+      <em>Made with Redux</em>
       <h1>Emoji Todo List</h1>
       <input
         type="text"

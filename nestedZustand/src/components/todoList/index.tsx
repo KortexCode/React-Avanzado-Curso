@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../store";
+import { useTodoStore } from "../../store/useTodoStore";
 import "./main.css"
-import { addTodo, removeTodo } from "../../features/todoActions";
+
+/*
+  otra forma de extraer elementos del estado:
+  const todos = useTodoStore((state) => state.todos);
+*/
 
 function TodoList() {
-  //Se extrae de React Redux la función de dispatch para ejecutar una acción
-  const dispatch: AppDispatch = useDispatch();
-  //Se extrae de React Redux la función useSelector para obtener el estado
- const todos = useSelector((state: RootState) => state.todos);
- 
+  //Extraemos el estado con el hook useTodoStore donde configuramos a zustand
+  const {todos, addTodo, removeTodo} = useTodoStore();
+
+  //Estado local para manejar los textos del input
   const [todoText, setTodoText] = useState<string>("");
+
   //Función manejadora de evento Key Up
   const handleAddTodo = (e: React.KeyboardEvent) => {
     if(e.key === "Enter" && todoText === "") {
@@ -18,19 +21,18 @@ function TodoList() {
       return
     }
     if(e.key === "Enter") {
-      dispatch(
-        addTodo(todoText)
-      )
+      addTodo(todoText)
     }
   };
 
-   const handleRemoveTodo = (id: string) => {
-    dispatch(removeTodo(id));
+  //Función manejadora para remover todos con click
+  const handleRemoveTodo = (id: string) => {
+    removeTodo(id);
   }
 
   return (
     <div className="todoList">
-      <em>Made with useReducer</em>
+      <em>Made with Zustand</em>
       <h1>Emoji Todo List</h1>
       <input
         type="text"

@@ -19,6 +19,7 @@ export default defineConfig(({ command, mode }) => {
             nested: resolve(__dirname, "nested/index.html"),
             nestedRedux: resolve(__dirname, "nestedRedux/index.html"),
             nestedZustand: resolve(__dirname, "nestedZustand/index.html"),
+            nestedTankQuery: resolve(__dirname, "nestedTanstackquery/index.html"),
           },
         },
       },
