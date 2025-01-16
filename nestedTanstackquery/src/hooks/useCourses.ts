@@ -6,6 +6,7 @@ interface Course {
   description: string;
   duration: string;
 }
+
 //Función que hará el fetch a la Api
 const fetchCourses: QueryFunction<Course[]> = async ()=> {
     const responde = await fetch('/nestedTanstackquery/src/public/api/courses.json');
@@ -13,6 +14,7 @@ const fetchCourses: QueryFunction<Course[]> = async ()=> {
         throw new Error("Network response was not ok");
     }
     return responde.json();
+  
 }
 //Hook usando useQuery para retornar los datos de la API pero permitiendo funcionalidades de tanstackquery
 const useCourses = () => {
