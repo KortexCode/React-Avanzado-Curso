@@ -2,6 +2,7 @@ import React, {StrictMode} from "react";
 import { createRoot } from 'react-dom/client'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import './index.css';
+import { CoursesContainer } from "./components/coursesContainer";
 
 // Create a client
 const queryClient = new QueryClient()
@@ -14,7 +15,7 @@ if (container) {
   root.render(
      <StrictMode>
       <QueryClientProvider client={queryClient}>
-        </>
+        <CoursesContainer/>
       </QueryClientProvider>
      </StrictMode>
   )
